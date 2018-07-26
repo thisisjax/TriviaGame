@@ -32,7 +32,14 @@
             <p>You will have a limited amount of time to finish the quiz!
                 <br> The game ends when the time runs out. Only pick one answer per question!
                 <br> Good Luck!!!</p>
-            <button type="button" class="btn btn-light">Start!</button>
+            <button  id="startTimer" type="button" class="btn btn-light">Start!</button>
+            <div id="wrapper">
+
+                    <div id="intervalTimer">00:00</div>
+              
+            
+              
+                  </div>
             <hr>
             
         </header>
@@ -43,9 +50,9 @@
             <form name="quizForm" onsubmit="return submitAnswers()">
                 <h3>1. What kind of pants was Jake from Statefarm wearing?</h3>
                 <input type="radio" name="q1" value="a" id="q1a">&nbsp A. Sweatpants &nbsp
-                <input type="radio" name="q2" value="b" id="q1b">&nbsp B. Jeans &nbsp
-                <input type="radio" name="q3" value="c" id="q1c">&nbsp C. Khakis &nbsp
-                <input type="radio" name="q4" value="d" id="q1d">&nbsp D. Shorts &nbsp
+                <input type="radio" name="q1" value="b" id="q1b">&nbsp B. Jeans &nbsp
+                <input type="radio" name="q1" value="c" id="q1c">&nbsp C. Khakis &nbsp
+                <input type="radio" name="q1" value="d" id="q1d">&nbsp D. Shorts &nbsp
 
                 <br><br>
 
@@ -122,6 +129,7 @@
                 <br><br>
 
                 <hr>
+                <p id="end">Click 'Submit Answers!' and scroll back to the top for your Score!</p>
                 <input type="submit" value="Submit Answers!">
             </form>
           

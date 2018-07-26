@@ -53,12 +53,18 @@ input [type="button"] {
 }
 /*Pop up After*/
 #results h3 {
-    background-color: blue;
+    color: black;
     page-break-after: 10px;
     margin: 10px 0;
+    background-color: blue;
 }
 #results span {
     color: white;
     font-weight: bold;
+}
+#end {
+    font-family: 'Shadows Into Light', cursive;
+    color: gray;
+    font-size: 30px;
 }
 

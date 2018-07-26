@@ -1,3 +1,25 @@
+//Interval Timer
+var timeIntervalUp;
+
+function startTimer(){ 
+          timeIntervalUp = setInterval(function(){countTimer()}, 1000);
+}
+function countTimer() {
+        document.getElementById("intervalTimer").innerHTML("Time Remaining: " + secondsDown);
+        secondsDown--;
+        
+         if (secondsDown == 0) {
+            clearInterval(timeIntervalUp);
+            endTimer();
+            reload();
+        }
+    }
+    $("#startTimer").on("click", function() {
+        startTimer();
+        countTimer();
+    });
+
+
 //User Input
 function submitAnswers() {
     var total = 10;
@@ -19,21 +41,21 @@ function submitAnswers() {
     for (i = 1; i <= total; i++) {
 //Get the users response- Then if they are correct or not
      //Check that each question has been answered and none were missed
-        if (eval('q' + 1) == null || (eval('q' + 1) === ' ') {
+        if ((eval('q' + i) == null) || (eval('q' + i) === ' ')) {
             alert('Opps! You missed Question ' + i);
-            return: false;
+            return false;
         }
     }
 
 
 
 //Set correct Answers
-    for = ["c", "a", "b", "a", "a", "b", "c", "c", "d", "c"];
+    var answers = ["c", "a", "b", "a", "a", "b", "c", "c", "d", "c"];
 
 //Loop thru all the Questions inside of the array
     //Check Answers
 for (i = 1; i <= 10; i++) {
-            if (eval('q' + 1) == answers[i - 1]) {
+            if (eval('q' + i) == answers[i - 1]) {
                 score++;
             }
         }
@@ -41,9 +63,14 @@ for (i = 1; i <= 10; i++) {
     var results = document.getElementById('results');
     results.innerHTML = '<h3>You scored <span>' + score + '</span> out of <span>' + total + '</span</h3>';
 //Tell them if they were right or wrong
-    alert('You scored ' + score + ' out of ' + total);
+    console.log('You scored ' + score + ' out of ' + total);
 
     return false;
+}
+#end {
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+    font-size: 30px;
 }
 
 
