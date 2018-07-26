@@ -18,25 +18,115 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kirang+Haerang|Shadows+Into+Light" rel="stylesheet">
 
 
 </head>
 
 <body>
- <div id="container"> 
-   
-<h1>Trivial Trivia Game</h1>
+    <!--Header-->
+    <div id="container">
+        <header>
+            <h1 class="h1">Trivial Trivia Game</h1>
+            <hr>
+            <p>You will have a limited amount of time to finish the quiz!
+                <br> The game ends when the time runs out. Only pick one answer per question!
+                <br> Good Luck!!!</p>
+            <button type="button" class="btn btn-light">Start!</button>
+            <hr>
+            
+        </header>
+        <!--Questions-->
+        <section>
+            <div id="results"></div>
+            
+            <form name="quizForm" onsubmit="return submitAnswers()">
+                <h3>1. What kind of pants was Jake from Statefarm wearing?</h3>
+                <input type="radio" name="q1" value="a" id="q1a">&nbsp A. Sweatpants &nbsp
+                <input type="radio" name="q2" value="b" id="q1b">&nbsp B. Jeans &nbsp
+                <input type="radio" name="q3" value="c" id="q1c">&nbsp C. Khakis &nbsp
+                <input type="radio" name="q4" value="d" id="q1d">&nbsp D. Shorts &nbsp
 
-    <p>You will have a limited amount of time to finish the quiz!<br>
-        The game ends when the time runs out. Only pick one answer per question!<br>
-        Good Luck!!!</p>
-        <button type="button" class="btn btn-light">Start!</button>
-        <hr>
+                <br><br>
 
+                <h3>2. The average person does what thirteen times a day?</h3>
+                <input type="radio" name="q2" value="a" id="q2a">&nbsp A. Laughs &nbsp
+                <input type="radio" name="q2" value="b" id="q2b">&nbsp B. Yawns &nbsp
+                <input type="radio" name="q2" value="c" id="q2c">&nbsp C. Sneezes &nbsp
+                <input type="radio" name="q2" value="d" id="q2d">&nbsp D. Coughs &nbsp
 
-    <button type="button" class="btn btn-light">Play Again!</button>
- </div>
+                <br><br>
+
+                <h3>3. The average American does what twenty-two times a day?</h3>
+                <input type="radio" name="q3" value="a" id="q3a">&nbsp A. Opens a door &nbsp
+                <input type="radio" name="q3" value="b" id="q3b">&nbsp B. Opens a fridge &nbsp
+                <input type="radio" name="q3" value="c" id="q3c">&nbsp C. Opens a can &nbsp
+                <input type="radio" name="q3" value="d" id="q3d">&nbsp D. Sits down &nbsp
+
+                <br><br>
+
+                <h3>4. On Sunday in Florida it is illegal for a women to do what?</h3>
+                <input type="radio" name="q4" value="a" id="q4a">&nbsp A. Skydive &nbsp
+                <input type="radio" name="q4" value="b" id="q4b">&nbsp B. Scubadive &nbsp
+                <input type="radio" name="q4" value="c" id="q4c">&nbsp C. Surf &nbsp
+                <input type="radio" name="q4" value="d" id="q4d">&nbsp D. Ski &nbsp
+
+                <br><br>
+
+                <h3>5. Coprastastaphobia is the fear of what?</h3>
+                <input type="radio" name="q5" value="a" id="q5a">&nbsp A. Constipation &nbsp
+                <input type="radio" name="q5" value="b" id="q5b">&nbsp B. Small Spaces &nbsp
+                <input type="radio" name="q5" value="c" id="q5c">&nbsp C. Spiders &nbsp
+                <input type="radio" name="q5" value="d" id="q5d">&nbsp D. Cobras &nbsp
+
+                <br><br>
+
+                <h3>6. It's illegal in Georgia to do what with a fork?</h3>
+                <input type="radio" name="q6" value="a" id="q6a">&nbsp A. Sing &nbsp
+                <input type="radio" name="q6" value="b" id="q6b">&nbsp B. Eat fried chicken &nbsp
+                <input type="radio" name="q6" value="c" id="q6c">&nbsp C. Use while driving &nbsp
+                <input type="radio" name="q6" value="d" id="q6d">&nbsp D. Cook &nbsp
+
+                <br><br>
+
+                <h3>7. Where are 40,000 Americans injured each year?</h3>
+                <input type="radio" name="q7" value="a" id="q7a">&nbsp A. The garage &nbsp
+                <input type="radio" name="q7" value="b" id="q7b">&nbsp B. The kitchen &nbsp
+                <input type="radio" name="q7" value="c" id="q7c">&nbsp C. The toliet &nbsp
+                <input type="radio" name="q7" value="d" id="q7d">&nbsp D. The pool &nbsp
+
+                <br><br>
+
+                <h3>8. It's illegal in Texas to put what on your neighbors cow?</h3>
+                <input type="radio" name="q8" value="a" id="q8a">&nbsp A. Tipping &nbsp
+                <input type="radio" name="q8" value="b" id="q8b">&nbsp B. Birds &nbsp
+                <input type="radio" name="q8" value="c" id="q8c">&nbsp C. Graffti &nbsp
+                <input type="radio" name="q8" value="d" id="q8d">&nbsp D. Shorts &nbsp
+                
+                <br><br>
+
+                <h3>9. In Virgina it's against the law for people to bribe anyone except who?</h3>
+                <input type="radio" name="q9" value="a" id="q9a">&nbsp A. Judges &nbsp
+                <input type="radio" name="q9" value="b" id="q9b">&nbsp B. Lawyers &nbsp
+                <input type="radio" name="q9" value="c" id="q9c">&nbsp C. Policemen &nbsp
+                <input type="radio" name="q9" value="d" id="q9d">&nbsp D. Political Candidates &nbsp
+
+                <br><br>
+
+                <h3>10. Over a lifetime, the average person grows how much nose hair?</h3>
+                <input type="radio" name="q10" value="a" id="q10a">&nbsp A. 2ft. &nbsp
+                <input type="radio" name="q10" value="b" id="q10b">&nbsp B. 5ft. &nbsp
+                <input type="radio" name="q10" value="c" id="q10c">&nbsp C. 7ft. &nbsp
+                <input type="radio" name="q10" value="d" id="q10d">&nbsp D. 10ft. &nbsp
+
+                <br><br>
+
+                <hr>
+                <input type="submit" value="Submit Answers!">
+            </form>
+          
+        </section>
+    </div>
 </body>
 
 </html>
