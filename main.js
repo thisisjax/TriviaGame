@@ -67,11 +67,7 @@ for (i = 1; i <= 10; i++) {
 
     return false;
 }
-#end {
-    font-family: 'Shadows Into Light', cursive;
-    color: white;
-    font-size: 30px;
-}
+
 
 
 
