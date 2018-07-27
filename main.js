@@ -1,51 +1,43 @@
-// //Interval Timer
-// //  Set our number counter to 100.
-// var number = 100;
+//Interval Timer
+//  Set our number counter to 100.
+var number = 100;
 
-// //  Variable that will hold our interval ID when we execute the "run" function
-// var intervalId;
+//  Variable that will hold our interval ID when we execute the "run" function
+var intervalId;
 
-// //  When the start button gets clicked, run the start function.
-// $("#start").on("click", decrement){
+//  The decrement function.
+function decrement() {
+
+    //  Decrease number by one.
+        number--;
     
-// }
+    //  Show the number in the #show-number tag.
+        $("#timer").text(number);
+    
+    
+    //  Once number hits zero...
+        if (number === 0) 
+    
+    //  Alert the user that time is up.
+            alert("Time Up!");
+        }
+//  The run function sets an interval
+//  that runs the decrement function once a second.
+function run() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
 
-// //  The run function sets an interval
-// //  that runs the decrement function once a second.
-// function run() {
-//     clearInterval(intervalId);
-//     intervalId = setInterval(decrement, 1000);
-// }
+}
 
-// //  The decrement function.
-// function decrement() {
+//  The stop function
+function stop() {
 
-// //  Decrease number by one.
-//     number--;
+//  Clears our intervalId
+//  We just pass the name of the interval
+//  to the clearInterval function.
+    clearInterval(intervalId);
 
-// //  Show the number in the #show-number tag.
-//     $("#timer").html("<p>" + number + "</p>");
-
-
-// //  Once number hits zero...
-//     if (number === 0) 
-
-// //  Alert the user that time is up.
-//         alert("Time Up!");
-//     }
-
-// //  The stop function
-// function stop() {
-
-// //  Clears our intervalId
-// //  We just pass the name of the interval
-// //  to the clearInterval function.
-//     clearInterval(intervalId);
-// }
-
-//  Execute the run function.
-
-
+};
 
 //User Input
 function submitAnswers() {
@@ -95,7 +87,7 @@ function submitAnswers() {
     return false;
 }
 
-
+run();
 
 
 
