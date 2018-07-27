@@ -33,6 +33,10 @@ header p {
     font-family: 'Shadows Into Light', cursive;
     font-size: 30px;
 }
+/*Start Button*/
+#start {
+    width: 100px;
+}
 /*Questions Box*/
 section {
     font-family: 'Amatic SC', cursive;

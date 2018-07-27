@@ -1,23 +1,50 @@
-//Interval Timer
-var timeIntervalUp;
+// //Interval Timer
+// //  Set our number counter to 100.
+// var number = 100;
 
-function startTimer(){ 
-          timeIntervalUp = setInterval(function(){countTimer()}, 1000);
-}
-function countTimer() {
-        document.getElementById("intervalTimer").innerHTML("Time Remaining: " + secondsDown);
-        secondsDown--;
-        
-         if (secondsDown == 0) {
-            clearInterval(timeIntervalUp);
-            endTimer();
-            reload();
-        }
-    }
-    $("#startTimer").on("click", function() {
-        startTimer();
-        countTimer();
-    });
+// //  Variable that will hold our interval ID when we execute the "run" function
+// var intervalId;
+
+// //  When the start button gets clicked, run the start function.
+// $("#start").on("click", decrement){
+    
+// }
+
+// //  The run function sets an interval
+// //  that runs the decrement function once a second.
+// function run() {
+//     clearInterval(intervalId);
+//     intervalId = setInterval(decrement, 1000);
+// }
+
+// //  The decrement function.
+// function decrement() {
+
+// //  Decrease number by one.
+//     number--;
+
+// //  Show the number in the #show-number tag.
+//     $("#timer").html("<p>" + number + "</p>");
+
+
+// //  Once number hits zero...
+//     if (number === 0) 
+
+// //  Alert the user that time is up.
+//         alert("Time Up!");
+//     }
+
+// //  The stop function
+// function stop() {
+
+// //  Clears our intervalId
+// //  We just pass the name of the interval
+// //  to the clearInterval function.
+//     clearInterval(intervalId);
+// }
+
+//  Execute the run function.
+
 
 
 //User Input
@@ -25,7 +52,7 @@ function submitAnswers() {
     var total = 10;
     var score = 0;
 
-    //Get User response
+//Get User response
     var q1 = document.forms["quizForm"]["q1"].value;
     var q2 = document.forms["quizForm"]["q2"].value;
     var q3 = document.forms["quizForm"]["q3"].value;
@@ -40,7 +67,7 @@ function submitAnswers() {
 //Loop thru every question to-
     for (i = 1; i <= total; i++) {
 //Get the users response- Then if they are correct or not
-     //Check that each question has been answered and none were missed
+//Check that each question has been answered and none were missed
         if ((eval('q' + i) == null) || (eval('q' + i) === ' ')) {
             alert('Opps! You missed Question ' + i);
             return false;
@@ -53,12 +80,12 @@ function submitAnswers() {
     var answers = ["c", "a", "b", "a", "a", "b", "c", "c", "d", "c"];
 
 //Loop thru all the Questions inside of the array
-    //Check Answers
-for (i = 1; i <= 10; i++) {
-            if (eval('q' + i) == answers[i - 1]) {
-                score++;
-            }
+//Check Answers
+    for (i = 1; i <= 10; i++) {
+        if (eval('q' + i) == answers[i - 1]) {
+            score++;
         }
+    }
 //Display Results
     var results = document.getElementById('results');
     results.innerHTML = '<h3>You scored <span>' + score + '</span> out of <span>' + total + '</span</h3>';
@@ -75,7 +102,7 @@ for (i = 1; i <= 10; i++) {
 
 
 
-//Ask each Question individually
+
 
 
 
